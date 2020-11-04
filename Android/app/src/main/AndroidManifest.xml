@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hack_ai_thon_android">
-
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,11 +12,10 @@
         <activity android:name=".ProgressReportForm"></activity>
         <activity android:name=".SurveyFormActivity" />
         <activity android:name=".ProgressReportList" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".LogInActivity" />
-        <activity android:name=".SignInActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".account.LogInActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".DashboardActivity">
+        <activity android:name=".account.SignUpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
