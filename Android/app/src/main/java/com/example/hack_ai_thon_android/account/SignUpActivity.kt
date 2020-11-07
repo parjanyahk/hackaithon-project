@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.hack_ai_thon_android.ui.dashboard.DashboardActivity
 import com.example.hack_ai_thon_android.R
+import com.example.hack_ai_thon_android.ui.survey.SurveyFormActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class SignUpActivity : AppCompatActivity() {
@@ -66,7 +67,7 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         if (mAuth.currentUser!=null){
-            startActivity(Intent(applicationContext, DashboardActivity::class.java))
+            startActivity(Intent(applicationContext, SurveyFormActivity::class.java))
         }
     }
 }
