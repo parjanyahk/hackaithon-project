@@ -1,5 +1,6 @@
 package com.example.hack_ai_thon_android.database
 
+import androidx.paging.DataSource
 import androidx.room.*
 import com.example.hack_ai_thon_android.data.SurveyData
 
@@ -16,5 +17,5 @@ interface SurveyDao {
     fun deleteSurvey(surveyData: SurveyData)
 
     @Query("SELECT * FROM Survey")
-    fun getSurveyData()
+    fun getSurveyData(): DataSource.Factory<Int, SurveyData>
 }
