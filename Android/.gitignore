@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 Android/.gitignore
+Android/app/google-services.json
+
