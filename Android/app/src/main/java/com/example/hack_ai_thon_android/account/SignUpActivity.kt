@@ -8,10 +8,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.example.hack_ai_thon_android.DashboardActivity
+import com.example.hack_ai_thon_android.ui.dashboard.DashboardActivity
 import com.example.hack_ai_thon_android.R
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class SignUpActivity : AppCompatActivity() {
 
