@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProgressReportForm"></activity>
-        <activity android:name=".SurveyFormActivity" />
-        <activity android:name=".ProgressReportList" />
-        <activity android:name=".DashboardActivity" />
+        <activity android:name=".ui.report.ProgressReportForm"></activity>
+        <activity android:name=".ui.survey.SurveyFormActivity" />
+        <activity android:name=".ui.report.ProgressReportList" />
+        <activity android:name=".ui.dashboard.DashboardActivity" />
         <activity android:name=".account.LogInActivity" />
-        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ui.settings.SettingsActivity" />
         <activity android:name=".account.SignUpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

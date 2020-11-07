@@ -7,7 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.hack_ai_thon_android.DashboardActivity
+import com.example.hack_ai_thon_android.ui.dashboard.DashboardActivity
 import com.example.hack_ai_thon_android.R
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.firebase.auth.FirebaseAuth
