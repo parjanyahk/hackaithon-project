@@ -36,6 +36,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/extraCurricularActivities">
 
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/extraRB">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -55,6 +59,8 @@
             android:fontFamily="@font/nunito_sans"
             android:text="NO"
             android:textColor="#ffffff" />
+
+        </RadioGroup>
 
     </LinearLayout>
 
@@ -114,6 +120,7 @@
                 android:layout_marginLeft="32dp"
                 android:layout_marginBottom="4dp"
                 android:checked="false"
+                android:id="@+id/videoTutorialsCB"
                 android:fontFamily="@font/nunito_sans"
                 android:text="Video Tutorials"
                 android:textColor="#ffffff"
@@ -127,6 +134,7 @@
                 android:checked="false"
                 android:fontFamily="@font/nunito_sans"
                 android:text="Documentation"
+                android:id="@+id/documentationCB"
                 android:textColor="#ffffff"
                 android:textSize="16sp" />
 
@@ -137,6 +145,7 @@
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/nunito_sans"
                 android:text="Online Cources"
+                android:id="@+id/onlineCoursesCB"
                 android:textColor="#ffffff"
                 android:textSize="16sp" />
 
@@ -147,6 +156,7 @@
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/nunito_sans"
                 android:text="Technical Blogs"
+                android:id="@+id/technicalBlogsCB"
                 android:textColor="#ffffff"
                 android:textSize="16sp" />
 

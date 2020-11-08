@@ -5,9 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.RadioButton
 import com.example.hack_ai_thon_android.R
+import com.example.hack_ai_thon_android.data.SurveyData
 import com.example.hack_ai_thon_android.ui.dashboard.DashboardActivity
 import kotlinx.android.synthetic.main.activity_survey_form.*
+import kotlinx.android.synthetic.main.fragment_domain.*
+import kotlinx.android.synthetic.main.fragment_job.*
+import kotlinx.android.synthetic.main.fragment_learning1.*
+import kotlinx.android.synthetic.main.fragment_learning2.*
+import kotlinx.android.synthetic.main.fragment_package.*
 import kotlinx.android.synthetic.main.fragment_sgpa.*
 import kotlinx.android.synthetic.main.fragment_skillset.*
 
@@ -28,6 +35,39 @@ class SurveyFormActivity : AppCompatActivity() {
     var restApi = 0
     var others = 0
     var softSkillsAndCommunication = 1
+    var jobStatus = 1
+
+
+    var mobile = 0
+    var mlAi = 0
+    var web = 0
+    var uiUx = 0
+    var cloudComp = 0
+    var dataSci = 0
+    var compCoding = 0
+    var dataStruct = 0
+    var testing = 0
+
+    var pDeveloper = 0
+    var pMachineLearningEng = 0
+    var pSoftwareEngineer = 0
+    var pDataAnalyst = 0
+    var pDataScientist = 0
+    var pQualityAssuranceOrTesting = 0
+    var pSystemAdministrator = 0
+    var oDeveloper = 0
+    var oMachineLearningEng = 0
+    var oSoftwareEngineer = 0
+    var oDataAnalyst = 0
+    var oDataScientist = 0
+    var oQualityAssuranceOrTesting = 0
+    var oSystemAdministrator = 0
+
+    var videoTutorials = 0
+    var documentation = 0
+    var onlineCourses = 0
+    var technicalBlogs = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,27 +122,126 @@ class SurveyFormActivity : AppCompatActivity() {
             others = 1
         }
 
-        if (RB1.isChecked){
-            softSkillsAndCommunication = 1
-        }else if (RB2.isChecked){
-            softSkillsAndCommunication = 2
-        }else if (RB3.isChecked){
-            softSkillsAndCommunication = 3
-        }else if (RB4.isChecked){
-            softSkillsAndCommunication = 4
-        }else if (RB5.isChecked){
-            softSkillsAndCommunication = 5
-        }else if (RB6.isChecked){
-            softSkillsAndCommunication = 6
-        }else if (RB7.isChecked){
-            softSkillsAndCommunication = 7
-        }else if(RB8.isChecked){
-            softSkillsAndCommunication = 8
-        }else if(RB9.isChecked){
-            softSkillsAndCommunication = 9
-        }else if (RB10.isChecked){
-            softSkillsAndCommunication = 10
+        var id: Int = radioGroup.checkedRadioButtonId
+        var radioButton: RadioButton = findViewById(id)
+        softSkillsAndCommunication = radioButton.text.toString().toInt()
+
+        var expectedPackage = expectedPackage.text.toString().toLong()
+        var obtainedPackage = obtainedPackage.text.toString().toLong()
+
+        if (mobileCB.isChecked){
+            mobile = 1
         }
+        if (ml_or_ai.isChecked){
+            mlAi = 1
+        }
+        if (webDevelopment.isChecked){
+            web = 1
+        }
+        if (ui_and_ux.isChecked){
+            uiUx = 1
+        }
+        if (cloudComputing.isChecked){
+            cloudComp = 1
+        }
+        if (dataScience.isChecked){
+            dataSci = 1
+        }
+        if (competitiveCoding.isChecked){
+            compCoding = 1
+        }
+        if (dataStructers.isChecked){
+            dataStruct = 1
+        }
+        if (testingCB.isChecked){
+            testing = 1
+        }
+
+        if (prefDeveloper.isChecked){
+            pDeveloper = 1
+        }
+        if (prefQualityAssurance.isChecked){
+            pQualityAssuranceOrTesting = 1
+        }
+        if (prefSystemAdministrator.isChecked){
+            pSystemAdministrator = 1
+        }
+        if (prefSoftwareEngineer.isChecked){
+            pSoftwareEngineer = 1
+        }
+        if (prefMachineLearningEngineer.isChecked){
+            pMachineLearningEng = 1
+        }
+        if (prefDataAnalyst.isChecked){
+            pDataAnalyst= 1
+        }
+        if (prefDataScientist.isChecked){
+            pDataScientist = 1
+        }
+
+        if (obtDeveloper.isChecked){
+            oDeveloper = 1
+        }
+        if (obtQualityAssurance.isChecked){
+            oQualityAssuranceOrTesting = 1
+        }
+        if (obtSystemAdministrator.isChecked){
+            oSystemAdministrator = 1
+        }
+        if (obtSoftwareEngineer.isChecked){
+            oSoftwareEngineer = 1
+        }
+        if (obtMachineLearningEngineer.isChecked){
+            oMachineLearningEng = 1
+        }
+        if (obtDataAnalyst.isChecked){
+            oDataAnalyst= 1
+        }
+        if (obtDataScientist.isChecked){
+            oDataScientist = 1
+        }
+        if (didNotGetaJob.isChecked){
+            jobStatus = 0
+        }
+
+        var hoursID: Int = hoursSpentRG.checkedRadioButtonId
+        var hoursRB: RadioButton = findViewById(hoursID)
+        var hoursSpent = hoursRB.text
+
+        var techID: Int = technicalClubsRG.checkedRadioButtonId
+        var techRB: RadioButton = findViewById(techID)
+        var tech = techRB.text
+        var techClubsJoined = 0
+        if (tech.equals("YES")){
+            techClubsJoined = 1
+        }else{
+            techClubsJoined = 0
+        }
+
+        var extraID = extraRB.checkedRadioButtonId
+        var extraRB: RadioButton = findViewById(extraID)
+        var extra = extraRB.text
+        var extraCurricularActivity = 0
+        if (extra.equals("YES")){
+            extraCurricularActivity = 1
+        }else{
+            extraCurricularActivity = 0
+        }
+
+        if (videoTutorialsCB.isChecked){
+            videoTutorials = 1
+        }
+        if (documentationCB.isChecked){
+            documentation = 1
+        }
+        if (onlineCoursesCB.isChecked){
+            onlineCourses = 1
+        }
+        if (technicalBlogsCB.isChecked){
+            technicalBlogs = 1
+        }
+
+
 
         back.setOnClickListener{
             if (i>0){
@@ -112,16 +251,25 @@ class SurveyFormActivity : AppCompatActivity() {
         }
 
         next.setOnClickListener {
-            if (i<7){
+            if (i<6){
                 i++
                 getScreen(i)
-            }else if (i==7){
+            }else if (i==6){
+
+                var surveyData = SurveyData(jobStatus, sem1.toString().toDouble(), sem2.toString().toDouble(), sem3.toString().toDouble(),
+                sem4.toString().toDouble(), sem5.toString().toDouble(), sem6.toString().toDouble(), sem7.toString().toDouble(), sem8.toString().toDouble(),
+                c, cpp, java, javaScript, python, kotlin, htmlFive, cssThree, php, r, database, restApi, others, mobile, mlAi, web, uiUx, cloudComp, dataSci,
+                compCoding, dataStruct, testing, expectedPackage, obtainedPackage, pDeveloper, pMachineLearningEng, pSoftwareEngineer, pDataAnalyst,
+                pDataScientist, pQualityAssuranceOrTesting, pSystemAdministrator, oDeveloper, oMachineLearningEng, oSoftwareEngineer, oDataAnalyst, oDataAnalyst,
+                oQualityAssuranceOrTesting, oSystemAdministrator, hoursSpent.toString().toInt(), techClubsJoined, extraCurricularActivity, videoTutorials,
+                documentation, onlineCourses, technicalBlogs, softSkillsAndCommunication)
+
                 val intent = Intent(this, DashboardActivity::class.java)
                 startActivity(intent)
             }
         }
 
-        if (i==7){
+        if (i==6){
             next.setImageResource(R.drawable.ic_baseline_check_24)
         }
     }
@@ -134,6 +282,8 @@ class SurveyFormActivity : AppCompatActivity() {
                 frameLayout_job.visibility = View.GONE
                 frameLayout_package.visibility = View.GONE
                 frameLayout_skillSet.visibility = View.GONE
+                frameLayout_learning1.visibility = View.GONE
+                frameLayout_learning2.visibility = View.GONE
             }
             1 -> {
                 frameLayout_sgpa.visibility = View.GONE
@@ -141,6 +291,8 @@ class SurveyFormActivity : AppCompatActivity() {
                 frameLayout_job.visibility = View.GONE
                 frameLayout_package.visibility = View.GONE
                 frameLayout_skillSet.visibility = View.VISIBLE
+                frameLayout_learning1.visibility = View.GONE
+                frameLayout_learning2.visibility = View.GONE
             }
             2 -> {
                 frameLayout_sgpa.visibility = View.GONE
@@ -148,6 +300,8 @@ class SurveyFormActivity : AppCompatActivity() {
                 frameLayout_job.visibility = View.GONE
                 frameLayout_package.visibility = View.VISIBLE
                 frameLayout_skillSet.visibility = View.GONE
+                frameLayout_learning1.visibility = View.GONE
+                frameLayout_learning2.visibility = View.GONE
             }
             3 -> {
                 frameLayout_sgpa.visibility = View.GONE
@@ -155,6 +309,8 @@ class SurveyFormActivity : AppCompatActivity() {
                 frameLayout_job.visibility = View.GONE
                 frameLayout_package.visibility = View.GONE
                 frameLayout_skillSet.visibility = View.GONE
+                frameLayout_learning1.visibility = View.GONE
+                frameLayout_learning2.visibility = View.GONE
             }
             4 -> {
                 frameLayout_sgpa.visibility = View.GONE
@@ -162,7 +318,28 @@ class SurveyFormActivity : AppCompatActivity() {
                 frameLayout_job.visibility = View.VISIBLE
                 frameLayout_package.visibility = View.GONE
                 frameLayout_skillSet.visibility = View.GONE
+                frameLayout_learning1.visibility = View.GONE
+                frameLayout_learning2.visibility = View.GONE
             }
+            5 -> {
+                frameLayout_sgpa.visibility = View.GONE
+                frameLayout_domain.visibility = View.GONE
+                frameLayout_job.visibility = View.GONE
+                frameLayout_package.visibility = View.GONE
+                frameLayout_skillSet.visibility = View.GONE
+                frameLayout_learning1.visibility = View.VISIBLE
+                frameLayout_learning2.visibility = View.GONE
+            }
+            6 -> {
+                frameLayout_sgpa.visibility = View.GONE
+                frameLayout_domain.visibility = View.GONE
+                frameLayout_job.visibility = View.GONE
+                frameLayout_package.visibility = View.GONE
+                frameLayout_skillSet.visibility = View.GONE
+                frameLayout_learning1.visibility = View.GONE
+                frameLayout_learning2.visibility = View.VISIBLE
+            }
+
         }
     }
 }

@@ -7,10 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Survey")
 data class SurveyData(
 
-    @PrimaryKey(autoGenerate = true)
-    val surveyID: Long,
-
-    val jobStatus: Boolean,
+    val jobStatus: Int,
 
     val firstSem: Double,
 
@@ -23,6 +20,8 @@ data class SurveyData(
     val fifthSem: Double,
 
     val sixthSem: Double,
+
+    val seventhSem: Double,
 
     val eighthSem: Double,
 
@@ -116,5 +115,8 @@ data class SurveyData(
 
     val technicalBlogs: Int,
 
-    val softSkillsAndCommunication: Int
+    val softSkillsAndCommunication: Int,
+
+    @PrimaryKey(autoGenerate = true)
+    val surveyID: Long = 0L
 )
