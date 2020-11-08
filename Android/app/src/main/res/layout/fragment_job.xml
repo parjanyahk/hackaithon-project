@@ -4,25 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#22222f"
     tools:context=".ui.survey.JobFragment">
 
     <TextView
         android:id="@+id/jobRole"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sign_in_btn"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:gravity="center"
         android:text="Job Role"
         android:textColor="#000000"
         android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="640dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jobRole">
 
@@ -36,16 +41,21 @@
             app:layout_constraintTop_toBottomOf="@id/jobRole">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/input_field_2"
+                android:fontFamily="@font/nunito_sans"
+                android:gravity="center"
                 android:text="Choose a preferred job role"
-                android:textColor="#000000"
+                android:textColor="#ffffff"
                 android:textSize="16sp" />
 
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="24dp">
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/input_field">
 
                 <LinearLayout
                     android:id="@+id/prefferedJobRole"
@@ -57,76 +67,104 @@
 
                     <RadioButton
                         android:id="@+id/prefDeveloper"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Developer (Web or Mobile)" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Developer (Web or Mobile)"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/prefQualityAssurance"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Quality Assurance / Testing" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Quality Assurance / Testing"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/prefSystemAdministrator"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="System Administrator - MNC" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="System Administrator - MNC"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/prefSoftwareEngineer"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Software Engineer" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Software Engineer"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/prefMachineLearningEngineer"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Machine Learning Engineer" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Machine Learning Engineer"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/prefDataAnalyst"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Data Analyst" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Data Analyst"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/prefDataScientist"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Data Scientist" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Data Scientist"
+                        android:textColor="#ffffff" />
 
                 </LinearLayout>
 
             </ScrollView>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/input_field_2"
+                android:fontFamily="@font/nunito_sans"
+                android:gravity="center"
                 android:text="Obtained job role"
-                android:textColor="#000000"
+                android:textColor="#ffffff"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/nunito_sans"
                 android:text="Please select 'Did not get a job' if not yet placed"
-                android:textColor="#000000"
+                android:textColor="#ffffff"
                 android:textSize="14sp" />
 
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="24dp">
+                android:background="@drawable/input_field">
 
                 <LinearLayout
                     android:id="@+id/obtainedJobRole"
@@ -138,59 +176,83 @@
 
                     <RadioButton
                         android:id="@+id/obtDeveloper"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Developer (Web or Mobile)" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Developer (Web or Mobile)"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/obtQualityAssurance"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Quality Assurance / Testing" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Quality Assurance / Testing"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/obtSystemAdministrator"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="System Administrator - MNC" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="System Administrator - MNC"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/obtSoftwareEngineer"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Software Engineer" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Software Engineer"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/obtMachineLearningEngineer"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Machine Learning Engineer" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Machine Learning Engineer"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/obtDataAnalyst"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Data Analyst" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Data Analyst"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/obtDataScientist"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Data Scientist" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Data Scientist"
+                        android:textColor="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/didNotGetaJob"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="4dp"
-                        android:text="Did not get a job" />
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Did not get a job"
+                        android:textColor="#ffffff" />
 
                 </LinearLayout>
 
