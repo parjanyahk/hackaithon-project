@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".account.SignUpActivity"
-    android:background="@drawable/bground">
+    android:background="@drawable/design_background"
+    android:textAlignment="center"
+    tools:context=".account.SignUpActivity">
 
     <EditText
         android:id="@+id/NameEtSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="264dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_field"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:hint="Name"
         android:inputType="textPersonName"
+        android:textAlignment="center"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.21" />
 
     <Button
         android:id="@+id/SignUpBtn"
@@ -38,19 +42,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.804" />
 
     <TextView
         android:id="@+id/alreadyHveAccTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="Already Have an Account?"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
+        android:text="Already a User?"
+        android:textColor="#e03434"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959" />
@@ -61,78 +65,94 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:text="Sign In"
-        android:textColor="#CA283D"
-        android:textStyle="bold"
+        android:textColor="#e03434"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959" />
 
     <EditText
         android:id="@+id/emailEtSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="264dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_field"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
+        android:textAlignment="center"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.391" />
+        app:layout_constraintVertical_bias="0.427" />
 
     <EditText
         android:id="@+id/PhoneEtSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="264dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_field"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:hint="Phone No."
         android:inputType="phone"
+        android:textAlignment="center"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        app:layout_constraintVertical_bias="0.317" />
 
     <EditText
         android:id="@+id/passwordEtSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="264dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_field"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textAlignment="center"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintVertical_bias="0.541" />
 
     <EditText
         android:id="@+id/confPassEtSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="264dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_field"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:hint="Confirm Password"
         android:inputType="textPassword"
+        android:textAlignment="center"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintVertical_bias="0.645" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
