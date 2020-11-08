@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hack_ai_thon_android.ui.dashboard.DashboardActivity
 import com.example.hack_ai_thon_android.R
+import com.example.hack_ai_thon_android.ui.survey.SurveyFormActivity
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -76,7 +77,7 @@ class LogInActivity : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?){
         if (user!=null){
-            val intent = Intent(this, DashboardActivity::class.java)
+            val intent = Intent(this, SurveyFormActivity::class.java)
             startActivity(intent)
         }
     }
