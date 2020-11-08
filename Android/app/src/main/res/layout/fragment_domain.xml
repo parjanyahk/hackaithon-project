@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#22222f"
-    tools:context=".ui.survey.DomainFragment">
+    android:background="#22222f">
 
     <TextView
         android:id="@+id/domain"
@@ -59,7 +58,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
-                    android:id="@+id/mobile"
+                    android:id="@+id/mobileCB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
@@ -143,7 +142,7 @@
                     android:textColor="#ffffff" />
 
                 <CheckBox
-                    android:id="@+id/testing"
+                    android:id="@+id/testingCB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
