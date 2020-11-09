@@ -69,9 +69,9 @@ data class SurveyData(
 
     val testing: Int,
 
-    val expected: Long,
+    val expected: Int,
 
-    val obtained: Long,
+    val obtained: Int,
 
     val pDeveloper: Int,
 

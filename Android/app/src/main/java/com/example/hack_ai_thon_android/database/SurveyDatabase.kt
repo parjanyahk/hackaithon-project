@@ -21,13 +21,11 @@ abstract class SurveyDatabase: RoomDatabase() {
 
         fun getInstance(context: Context): SurveyDatabase{
             synchronized(this){
-                var instance: SurveyDatabase? = INSTANCE
-                if (instance==null) {
+                if (INSTANCE==null) {
                     INSTANCE = Room.databaseBuilder(context, SurveyDatabase::class.java, "Database")
                         .fallbackToDestructiveMigration().build()
-                    INSTANCE = instance
                 }
-                return instance!!
+                return INSTANCE!!
             }
         }
     }

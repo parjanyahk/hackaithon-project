@@ -59,7 +59,7 @@
             android:textSize="14sp" />
 
         <EditText
-            android:id="@+id/expectedPackage"
+            android:id="@+id/expectPackage"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginBottom="40dp"
@@ -91,7 +91,7 @@
             android:textColor="#ffffff" />
 
         <EditText
-            android:id="@+id/obtainedPackage"
+            android:id="@+id/obtainPackage"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@drawable/input_field"

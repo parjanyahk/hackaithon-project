@@ -77,7 +77,7 @@ class LogInActivity : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?){
         if (user!=null){
-            val intent = Intent(this, SurveyFormActivity::class.java)
+            val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
         }
     }

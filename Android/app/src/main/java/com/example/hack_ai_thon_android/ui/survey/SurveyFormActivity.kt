@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.RadioButton
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.example.hack_ai_thon_android.R
 import com.example.hack_ai_thon_android.data.SurveyData
 import com.example.hack_ai_thon_android.ui.dashboard.DashboardActivity
@@ -37,6 +39,8 @@ class SurveyFormActivity : AppCompatActivity() {
     var softSkillsAndCommunication = 1
     var jobStatus = 1
 
+    var expectedPackage = 0
+    var obtainedPackage = 0
 
     var mobile = 0
     var mlAi = 0
@@ -68,10 +72,14 @@ class SurveyFormActivity : AppCompatActivity() {
     var onlineCourses = 0
     var technicalBlogs = 0
 
+    lateinit var surveyFormViewModel: SurveyFormViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_survey_form)
+
+        surveyFormViewModel = ViewModelProvider(this).get(SurveyFormViewModel::class.java)
 
         var sem1 = sgpa1.text
         var sem2 = sgpa2.text
@@ -122,12 +130,27 @@ class SurveyFormActivity : AppCompatActivity() {
             others = 1
         }
 
-        var id: Int = radioGroup.checkedRadioButtonId
-        var radioButton: RadioButton = findViewById(id)
-        softSkillsAndCommunication = radioButton.text.toString().toInt()
+        when(this.radioGroup.checkedRadioButtonId){
+            R.id.RB1 -> softSkillsAndCommunication = 1
+            R.id.RB2 -> softSkillsAndCommunication = 2
+            R.id.RB3 -> softSkillsAndCommunication = 3
+            R.id.RB4 -> softSkillsAndCommunication = 4
+            R.id.RB5 -> softSkillsAndCommunication = 5
+            R.id.RB6 -> softSkillsAndCommunication = 6
+            R.id.RB7 -> softSkillsAndCommunication = 7
+            R.id.RB8 -> softSkillsAndCommunication = 8
+            R.id.RB9 -> softSkillsAndCommunication = 9
+            R.id.RB10 -> softSkillsAndCommunication = 10
+        }
 
-        var expectedPackage = expectedPackage.text.toString().toLong()
-        var obtainedPackage = obtainedPackage.text.toString().toLong()
+//        if(expectPackage.text.toString()!=null || expectedPackage.toString().isNotEmpty()){
+//            expectedPackage = expectPackage.text.toString().toInt()
+//
+//        }
+//        if (obtainPackage.text.toString().isNotEmpty()) {
+//            obtainedPackage = obtainPackage.text.toString().toInt()
+//        }
+
 
         if (mobileCB.isChecked){
             mobile = 1
@@ -263,6 +286,8 @@ class SurveyFormActivity : AppCompatActivity() {
                 pDataScientist, pQualityAssuranceOrTesting, pSystemAdministrator, oDeveloper, oMachineLearningEng, oSoftwareEngineer, oDataAnalyst, oDataAnalyst,
                 oQualityAssuranceOrTesting, oSystemAdministrator, hoursSpent.toString().toInt(), techClubsJoined, extraCurricularActivity, videoTutorials,
                 documentation, onlineCourses, technicalBlogs, softSkillsAndCommunication)
+
+                surveyFormViewModel.insertSurvey(surveyData)
 
                 val intent = Intent(this, DashboardActivity::class.java)
                 startActivity(intent)
