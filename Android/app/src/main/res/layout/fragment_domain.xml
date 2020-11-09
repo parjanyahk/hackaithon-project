@@ -46,7 +46,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="500dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/input_field">
 
@@ -57,99 +57,194 @@
                 android:layout_marginBottom="16dp"
                 android:orientation="vertical">
 
-                <CheckBox
-                    android:id="@+id/mobileCB"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Mobile (Android / ios / Flutter / React Native)"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Mobile (Android / ios / Flutter / React Native)"
-                    android:textColor="#ffffff" />
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <CheckBox
-                    android:id="@+id/ml_or_ai"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="ML / AI"
-                    android:textColor="#ffffff" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mobDomainEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
 
-                <CheckBox
-                    android:id="@+id/webDevelopment"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Web Development (Front end / Back end / Both)"
-                    android:textColor="#ffffff" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <CheckBox
-                    android:id="@+id/ui_and_ux"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="ML / AI"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="UI and UX"
-                    android:textColor="#ffffff" />
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <CheckBox
-                    android:id="@+id/cloudComputing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Cloud Computing"
-                    android:textColor="#ffffff" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mlAiDomainEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
 
-                <CheckBox
-                    android:id="@+id/dataScience"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Data Science and Big Data"
-                    android:textColor="#ffffff" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <CheckBox
-                    android:id="@+id/competitiveCoding"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Web Development (Front end / Back end / Both)"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Competitive Coding"
-                    android:textColor="#ffffff" />
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <CheckBox
-                    android:id="@+id/dataStructers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Data Structers and Algorithms"
-                    android:textColor="#ffffff" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/webDomainEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
 
-                <CheckBox
-                    android:id="@+id/testingCB"
-                    android:layout_width="wrap_content"
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="UI and UX"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Testing"
-                    android:textColor="#ffffff" />
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/uiUxDomainEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Cloud Computing"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cloudCompDomainEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Data Science and Big Data"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dataSciDomainEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Competitive Coding"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/compiCodingDomainEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Data Structers and Algorithms"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dataStructDomainEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Testing"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/testingDomainEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
