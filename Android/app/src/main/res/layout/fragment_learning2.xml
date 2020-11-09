@@ -42,6 +42,7 @@
             android:id="@+id/extraRB">
 
         <RadioButton
+            android:id="@+id/yesExtCurr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
@@ -51,6 +52,7 @@
             android:textColor="#ffffff" />
 
         <RadioButton
+            android:id="@+id/noExtCurr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
