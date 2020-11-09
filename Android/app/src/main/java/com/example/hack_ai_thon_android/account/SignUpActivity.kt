@@ -53,7 +53,7 @@ class SignUpActivity : AppCompatActivity() {
                 mAuth.createUserWithEmailAndPassword(mail, p1)
                     .addOnCompleteListener {
                         if (it.isSuccessful()){
-                            startActivity(Intent(applicationContext, DashboardActivity::class.java))
+                            startActivity(Intent(applicationContext, SurveyFormActivity::class.java))
                             finish()
                         }else{
                             Toast.makeText(this, "An error has occurred", Toast.LENGTH_SHORT).show()
@@ -66,8 +66,8 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(Intent(applicationContext, LogInActivity::class.java))
         }
 
-        if (mAuth.currentUser!=null){
-            startActivity(Intent(applicationContext, SurveyFormActivity::class.java))
-        }
+//        if (mAuth.currentUser!=null){
+//            startActivity(Intent(applicationContext, SurveyFormActivity::class.java))
+//        }
     }
 }

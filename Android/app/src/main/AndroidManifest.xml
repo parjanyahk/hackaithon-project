@@ -13,9 +13,9 @@
         <activity android:name=".ui.survey.SurveyFormActivity" />
         <activity android:name=".ui.report.ProgressReportList" />
         <activity android:name=".ui.dashboard.DashboardActivity" />
-        <activity android:name=".account.LogInActivity" />
+        <activity android:name=".account.SignUpActivity" />
         <activity android:name=".ui.settings.SettingsActivity" />
-        <activity android:name=".account.SignUpActivity">
+        <activity android:name=".account.LogInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

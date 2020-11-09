@@ -92,6 +92,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/cet"
                         android:fontFamily="@font/nunito_sans"
                         />
 
@@ -111,6 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/cppet"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -129,6 +131,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/javaet"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -147,6 +150,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/jset"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -165,6 +169,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/pythonet"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -183,6 +188,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/kotlinet"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -201,6 +207,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/htmlet"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -219,6 +226,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/csset"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -237,6 +245,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/phpet"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -254,6 +263,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:id="@+id/ret"
                         android:inputType="number"
                         android:fontFamily="@font/nunito_sans"/>
 
@@ -273,6 +283,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/databaseet"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -291,6 +302,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/restApiet"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -309,6 +321,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:id="@+id/otherset"
                         android:fontFamily="@font/nunito_sans"/>
 
                 </com.google.android.material.textfield.TextInputLayout>

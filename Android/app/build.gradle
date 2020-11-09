@@ -9,6 +9,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
 
+    aaptOptions{
+        noCompress "tflite"
+    }
+
     defaultConfig {
         applicationId "com.example.hack_ai_thon_android"
         minSdkVersion 24

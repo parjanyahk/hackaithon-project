@@ -48,7 +48,7 @@ class SurveyRepository(application: Application) {
         }
     }
 
-    fun getSurveyData(): LiveData<PagedList<SurveyData>> {
-        return LivePagedListBuilder(surveyDao.getSurveyData(), 15).build()
+    fun getSurveyData(): SurveyData {
+       return surveyDao.getSurveyData()
     }
 }
