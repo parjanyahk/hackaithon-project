@@ -48,15 +48,24 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="57dp"
+                android:layout_height="72dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/input_field_2"
                 android:fontFamily="@font/nunito_sans"
                 android:gravity="center"
-                android:text="Please select all the language(s) known"
+                android:text="Please rate your language skillset between the range 0 - 10"
                 android:textColor="#ffffff"
                 android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 being least and 10 being the most"
+                android:gravity="center"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/nunito_sans"
+                android:textColor="#ffffff"/>
 
 
             <LinearLayout
@@ -68,154 +77,241 @@
                 android:background="@drawable/input_field"
                 android:orientation="vertical">
 
-                <CheckBox
-                    android:id="@+id/cCB"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="C"
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="C"
-                    android:textColor="#ffffff" />
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <CheckBox
-                    android:id="@+id/cppCB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="C++"
-                    android:textColor="#ffffff" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"
+                        />
 
-                <CheckBox
-                    android:id="@+id/javaCB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Java"
-                    android:textColor="#ffffff" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <CheckBox
-                    android:id="@+id/javaScriptCB"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="C++"
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="JavaScript"
-                    android:textColor="#ffffff" />
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <CheckBox
-                    android:id="@+id/pythonCB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Python"
-                    android:textColor="#ffffff" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
 
-                <CheckBox
-                    android:id="@+id/kotlinCB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Kotlin"
-                    android:textColor="#ffffff" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <CheckBox
-                    android:id="@+id/html5CB"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Java"
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="HTML 5"
-                    android:textColor="#ffffff" />
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <CheckBox
-                    android:id="@+id/css3CB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="CSS 3"
-                    android:textColor="#ffffff" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
 
-                <CheckBox
-                    android:id="@+id/phpCB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:checked="false"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="PHP"
-                    android:textColor="#ffffff" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <CheckBox
-                    android:id="@+id/rCB"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="JavaScript"
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="R"
-                    android:textColor="#ffffff" />
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <CheckBox
-                    android:id="@+id/databaseCB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Database"
-                    android:textColor="#ffffff" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
 
-                <CheckBox
-                    android:id="@+id/restApiCB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Rest API"
-                    android:textColor="#ffffff" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <CheckBox
-                    android:id="@+id/othersCB"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Python"
                     android:layout_marginLeft="32dp"
                     android:layout_marginRight="32dp"
-                    android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/nunito_sans"
-                    android:text="Others"
-                    android:textColor="#ffffff" />
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Kotlin"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="HTML 5"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="CSS 3"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="PHP"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="R"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Database"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rest API"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Others"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:textColorHint="#ffffff"
+                    app:boxStrokeColor="#ffffff"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/nunito_sans"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
