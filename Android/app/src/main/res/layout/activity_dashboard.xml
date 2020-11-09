@@ -53,11 +53,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extendedFloatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="94dp"
-        android:background="@drawable/sign_in_btn"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Predict"
         android:textAllCaps="false"
@@ -68,10 +68,11 @@
         android:layout_width="175dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="220dp"
         android:background="@drawable/dashboard_content_background"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11">
 
@@ -103,6 +104,17 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="@+id/extendedFloatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684"
+        app:srcCompat="@drawable/graph" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

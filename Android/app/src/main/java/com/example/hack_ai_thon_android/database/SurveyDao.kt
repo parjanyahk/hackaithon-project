@@ -17,5 +17,5 @@ interface SurveyDao {
     fun deleteSurvey(surveyData: SurveyData)
 
     @Query("SELECT * FROM Survey")
-    fun getSurveyData(): DataSource.Factory<Int, SurveyData>
+    fun getSurveyData(): SurveyData
 }

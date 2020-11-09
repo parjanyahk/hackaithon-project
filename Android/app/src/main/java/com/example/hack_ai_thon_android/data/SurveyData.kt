@@ -9,21 +9,21 @@ data class SurveyData(
 
     val jobStatus: Int,
 
-    val firstSem: Double,
+    val firstSem: Float,
 
-    val secondSem: Double,
+    val secondSem: Float,
 
-    val thirdSem: Double,
+    val thirdSem: Float,
 
-    val fourthSem: Double,
+    val fourthSem: Float,
 
-    val fifthSem: Double,
+    val fifthSem: Float,
 
-    val sixthSem: Double,
+    val sixthSem: Float,
 
-    val seventhSem: Double,
+    val seventhSem: Float,
 
-    val eighthSem: Double,
+    val eighthSem: Float,
 
     val c: Int,
 

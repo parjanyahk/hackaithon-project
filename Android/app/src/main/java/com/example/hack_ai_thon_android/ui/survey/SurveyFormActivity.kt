@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.RadioButton
+import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.hack_ai_thon_android.R
@@ -23,34 +24,8 @@ import kotlinx.android.synthetic.main.fragment_skillset.*
 class SurveyFormActivity : AppCompatActivity() {
 
     var i = 0
-    var c = 0
-    var cpp = 0
-    var java = 0
-    var javaScript = 0
-    var python = 0
-    var kotlin = 0
-    var htmlFive = 0
-    var cssThree = 0
-    var php = 0
-    var r = 0
-    var database = 0
-    var restApi = 0
-    var others = 0
     var softSkillsAndCommunication = 1
     var jobStatus = 1
-
-    var expectedPackage = 0
-    var obtainedPackage = 0
-
-    var mobile = 0
-    var mlAi = 0
-    var web = 0
-    var uiUx = 0
-    var cloudComp = 0
-    var dataSci = 0
-    var compCoding = 0
-    var dataStruct = 0
-    var testing = 0
 
     var pDeveloper = 0
     var pMachineLearningEng = 0
@@ -66,6 +41,9 @@ class SurveyFormActivity : AppCompatActivity() {
     var oDataScientist = 0
     var oQualityAssuranceOrTesting = 0
     var oSystemAdministrator = 0
+
+    var techClubsJoined = 0
+    var extraCurricularActivity = 0
 
     var videoTutorials = 0
     var documentation = 0
@@ -90,45 +68,20 @@ class SurveyFormActivity : AppCompatActivity() {
         var sem7 = sgpa7.text
         var sem8 = sgpa8.text
 
-        if (cCB.isChecked){
-            c = 1
-        }
-        if (cppCB.isChecked){
-            cpp = 1
-        }
-        if (javaCB.isChecked){
-            java = 1
-        }
-        if (javaScriptCB.isChecked){
-            javaScript = 1
-        }
-        if (pythonCB.isChecked){
-            python = 1
-        }
-        if (kotlinCB.isChecked){
-            kotlin = 1
-        }
-        if (html5CB.isChecked){
-            htmlFive = 1
-        }
-        if (css3CB.isChecked){
-            cssThree = 1
-        }
-        if (phpCB.isChecked){
-            php = 1
-        }
-        if (rCB.isChecked){
-            r = 1
-        }
-        if (databaseCB.isChecked){
-            database = 1
-        }
-        if (restApiCB.isChecked){
-            restApi = 1
-        }
-        if (othersCB.isChecked){
-            others = 1
-        }
+
+           var c = cet.text!!
+            var cpp = cppet.text!!
+            var java = javaet.text!!
+            var javaScript = jset.text!!
+            var python = pythonet.text!!
+            var kotlin = kotlinet.text!!
+            var htmlFive = htmlet.text!!
+            var cssThree = csset.text!!
+            var php = phpet.text!!
+            var r = ret.text!!
+            var database = databaseet.text!!
+            var restApi = restApiet.text!!
+            var others = otherset.text!!
 
         when(this.radioGroup.checkedRadioButtonId){
             R.id.RB1 -> softSkillsAndCommunication = 1
@@ -144,41 +97,23 @@ class SurveyFormActivity : AppCompatActivity() {
         }
 
 //        if(expectPackage.text.toString()!=null || expectedPackage.toString().isNotEmpty()){
-//            expectedPackage = expectPackage.text.toString().toInt()
+           var expectedPackage = expectPackage.text
 //
 //        }
 //        if (obtainPackage.text.toString().isNotEmpty()) {
-//            obtainedPackage = obtainPackage.text.toString().toInt()
+           var obtainedPackage = obtainPackage.text
 //        }
 
 
-        if (mobileCB.isChecked){
-            mobile = 1
-        }
-        if (ml_or_ai.isChecked){
-            mlAi = 1
-        }
-        if (webDevelopment.isChecked){
-            web = 1
-        }
-        if (ui_and_ux.isChecked){
-            uiUx = 1
-        }
-        if (cloudComputing.isChecked){
-            cloudComp = 1
-        }
-        if (dataScience.isChecked){
-            dataSci = 1
-        }
-        if (competitiveCoding.isChecked){
-            compCoding = 1
-        }
-        if (dataStructers.isChecked){
-            dataStruct = 1
-        }
-        if (testingCB.isChecked){
-            testing = 1
-        }
+            var mobile = mobDomainEt.text!!
+            var mlAi = mlAiDomainEt.text!!
+            var web = webDomainEt.text!!
+            var uiUx = uiUxDomainEt.text!!
+            var cloudComp = cloudCompDomainEt.text!!
+            var dataSci = dataSciDomainEt.text!!
+            var compCoding = compiCodingDomainEt.text!!
+            var dataStruct = dataStructDomainEt.text!!
+            var testing = testingDomainEt.text!!
 
         if (prefDeveloper.isChecked){
             pDeveloper = 1
@@ -227,28 +162,18 @@ class SurveyFormActivity : AppCompatActivity() {
             jobStatus = 0
         }
 
-        var hoursID: Int = hoursSpentRG.checkedRadioButtonId
-        var hoursRB: RadioButton = findViewById(hoursID)
-        var hoursSpent = hoursRB.text
+        var hoursSpent = workingHours.text
 
         var techID: Int = technicalClubsRG.checkedRadioButtonId
-        var techRB: RadioButton = findViewById(techID)
-        var tech = techRB.text
-        var techClubsJoined = 0
-        if (tech.equals("YES")){
-            techClubsJoined = 1
-        }else{
-            techClubsJoined = 0
+        when(techID){
+            R.id.yesTechClub -> techClubsJoined = 1
+            R.id.noTechClub -> techClubsJoined = 0
         }
 
         var extraID = extraRB.checkedRadioButtonId
-        var extraRB: RadioButton = findViewById(extraID)
-        var extra = extraRB.text
-        var extraCurricularActivity = 0
-        if (extra.equals("YES")){
-            extraCurricularActivity = 1
-        }else{
-            extraCurricularActivity = 0
+        when(extraID){
+            R.id.yesExtCurr -> extraCurricularActivity = 1
+            R.id.noExtCurr -> extraCurricularActivity = 0
         }
 
         if (videoTutorialsCB.isChecked){
@@ -277,20 +202,79 @@ class SurveyFormActivity : AppCompatActivity() {
             if (i<6){
                 i++
                 getScreen(i)
-            }else if (i==6){
+            }else if (i==6) {
 
-                var surveyData = SurveyData(jobStatus, sem1.toString().toDouble(), sem2.toString().toDouble(), sem3.toString().toDouble(),
-                sem4.toString().toDouble(), sem5.toString().toDouble(), sem6.toString().toDouble(), sem7.toString().toDouble(), sem8.toString().toDouble(),
-                c, cpp, java, javaScript, python, kotlin, htmlFive, cssThree, php, r, database, restApi, others, mobile, mlAi, web, uiUx, cloudComp, dataSci,
-                compCoding, dataStruct, testing, expectedPackage, obtainedPackage, pDeveloper, pMachineLearningEng, pSoftwareEngineer, pDataAnalyst,
-                pDataScientist, pQualityAssuranceOrTesting, pSystemAdministrator, oDeveloper, oMachineLearningEng, oSoftwareEngineer, oDataAnalyst, oDataAnalyst,
-                oQualityAssuranceOrTesting, oSystemAdministrator, hoursSpent.toString().toInt(), techClubsJoined, extraCurricularActivity, videoTutorials,
-                documentation, onlineCourses, technicalBlogs, softSkillsAndCommunication)
+                if (sem1.isNotEmpty() && sem2.isNotEmpty() && sem3.isNotEmpty() && sem4.isNotEmpty() && sem5.isNotEmpty() && sem6.isNotEmpty() && sem7.isNotEmpty() && sem8.isNotEmpty()
+                    && c.isNotEmpty() && cpp.isNotEmpty() && java.isNotEmpty() && javaScript.isNotEmpty() && python.isNotEmpty() && kotlin.isNotEmpty() && htmlFive.isNotEmpty() && cssThree.isNotEmpty() && php.isNotEmpty() && r.isNotEmpty() && database.isNotEmpty() && restApi.isNotEmpty() && others.isNotEmpty()
+                    && expectedPackage.isNotEmpty() && obtainedPackage.isNotEmpty() && hoursSpent.isNotEmpty()) {
+                    var surveyData = SurveyData(
+                        jobStatus,
+                        sem1.toString().toFloat(),
+                        sem2.toString().toFloat(),
+                        sem3.toString().toFloat(),
+                        sem4.toString().toFloat(),
+                        sem5.toString().toFloat(),
+                        sem6.toString().toFloat(),
+                        sem7.toString().toFloat(),
+                        sem8.toString().toFloat(),
+                        c.toString().toInt(),
+                        cpp.toString().toInt(),
+                        java.toString().toInt(),
+                        javaScript.toString().toInt(),
+                        python.toString().toInt(),
+                        kotlin.toString().toInt(),
+                        htmlFive.toString().toInt(),
+                        cssThree.toString().toInt(),
+                        php.toString().toInt(),
+                        r.toString().toInt(),
+                        database.toString().toInt(),
+                        restApi.toString().toInt(),
+                        others.toString().toInt(),
+                        mobile.toString().toInt(),
+                        mlAi.toString().toInt(),
+                        web.toString().toInt(),
+                        uiUx.toString().toInt(),
+                        cloudComp.toString().toInt(),
+                        dataSci.toString().toInt(),
+                        compCoding.toString().toInt(),
+                        dataStruct.toString().toInt(),
+                        testing.toString().toInt(),
+                        expectedPackage.toString().toInt(),
+                        obtainedPackage.toString().toInt(),
+                        pDeveloper,
+                        pMachineLearningEng,
+                        pSoftwareEngineer,
+                        pDataAnalyst,
+                        pDataScientist,
+                        pQualityAssuranceOrTesting,
+                        pSystemAdministrator,
+                        oDeveloper,
+                        oMachineLearningEng,
+                        oSoftwareEngineer,
+                        oDataAnalyst,
+                        oDataAnalyst,
+                        oQualityAssuranceOrTesting,
+                        oSystemAdministrator,
+                        hoursSpent.toString().toInt(),
+                        techClubsJoined,
+                        extraCurricularActivity,
+                        videoTutorials,
+                        documentation,
+                        onlineCourses,
+                        technicalBlogs,
+                        softSkillsAndCommunication
+                    )
 
-                surveyFormViewModel.insertSurvey(surveyData)
+                    surveyFormViewModel.insertSurvey(surveyData)
 
-                val intent = Intent(this, DashboardActivity::class.java)
-                startActivity(intent)
+                    val intent = Intent(this, DashboardActivity::class.java)
+                    startActivity(intent)
+                }
+                else{
+                    Toast.makeText(this, "error", Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, DashboardActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
 
