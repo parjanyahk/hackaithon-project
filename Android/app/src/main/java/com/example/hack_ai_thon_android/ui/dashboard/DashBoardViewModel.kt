@@ -7,10 +7,10 @@ import com.example.hack_ai_thon_android.database.SurveyRepository
 
 class DashBoardViewModel(application: Application): AndroidViewModel(application) {
 
-//    val repository = SurveyRepository.getRepository(application)!!
-//    val surveyData: SurveyData
-//
-//    init {
-//        surveyData = repository.getSurveyData()
-//    }
+    val repository = SurveyRepository.getRepository(application)!!
+    val surveyData: SurveyData
+
+    init {
+        surveyData = repository.getSurveyData().get()
+    }
 }
