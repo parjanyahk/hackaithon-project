@@ -5,7 +5,9 @@ import androidx.lifecycle.LiveData
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.example.hack_ai_thon_android.data.SurveyData
+import java.util.concurrent.Callable
 import java.util.concurrent.Executors
+import java.util.concurrent.Future
 
 class SurveyRepository(application: Application) {
     private val surveyDao: SurveyDao
@@ -48,7 +50,10 @@ class SurveyRepository(application: Application) {
         }
     }
 
-    fun getSurveyData(): SurveyData {
-       return surveyDao.getSurveyData()
+    fun getSurveyData(): Future<SurveyData> {
+        val callable = Callable<SurveyData>(){
+            return@Callable surveyDao.getSurveyData()
+        }
+       return executorService.submit(callable)
     }
 }
